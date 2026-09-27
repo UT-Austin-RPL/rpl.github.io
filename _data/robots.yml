@@ -1,0 +1,67 @@
+mew:
+  name: GR-1 (Mew)
+  image: mew.jpg
+  title: GR-1
+
+mewtwo:
+  name: GR-1 (Mewtwo)
+  image: mewtwo.png
+  title: GR-1
+
+nidoking:
+  name: YAM (Nidoking)
+  image: YAM_Nidoking.png
+  title: YAM
+
+nidoqueen:
+  name: YAM (Nidoqueen)
+  image: YAM_Nidoqueen.jpg
+  title: YAM
+
+machop:
+  name: G1 (Machop)
+  image: G1_Machop.png
+  title: G1
+
+alice:
+  name: Panda (Charmander)
+  image: alice.jpg
+  title: Franka Emika
+
+bob:
+  name: Panda (Squirtle)
+  image: bob.jpg
+  title: Franka Emika
+
+bulbasaur:
+  name: Panda (Bulbasaur)
+  image: bulbasaur.png
+  title: Franka Emika
+
+pikachu:
+  name: Panda (Pikachu)
+  image: pikachu.png
+  title: Franka Emika
+
+laikago:
+  name: Laikago
+  image: laikago.jpg
+  title: Unitree Robotics
+  note: (shared with <a href="https://sites.utexas.edu/hcrl/">HCRL</a>)
+
+a1:
+  name: A1
+  image: a1.jpg
+  title: Unitree Robotics
+  note: (shared with <a href="https://sites.utexas.edu/hcrl/">HCRL</a>)
+
+draco3:
+  name: DRACO 3
+  image: draco3.png
+  title: DRACO 3
+  note: (shared with <a href="https://sites.utexas.edu/hcrl/">HCRL</a>)
+
+pupper:
+  name: Pupper
+  image: pupper.png
+  title: Pupper

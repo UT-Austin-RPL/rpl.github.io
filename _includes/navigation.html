@@ -1,0 +1,10 @@
+{% assign default_paths = site.pages | map: "path" %}
+{% assign page_paths = site.header_pages | default: default_paths %}
+
+<a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+<a class="nav-link" href="{{ 'people/' | relative_url }}">People</a>
+<a class="nav-link" href="{{ 'robots/' | relative_url }}">Robots</a>
+<a class="nav-link" href="{{ 'publications/' | relative_url }}">Publications</a>
+<a class="nav-link" href="{{ 'research/' | relative_url }}">Research</a>
+<a class="nav-link" href="{{ 'teaching/' | relative_url }}">Teaching</a>
+<a class="nav-link" href="{{ 'opportunities/' | relative_url }}">Opportunities</a>

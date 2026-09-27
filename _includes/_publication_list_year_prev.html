@@ -1,0 +1,27 @@
+<script type="text/javascript">
+  // Toggle Display of BibTeX
+  function HideShowElement() {
+    var x = document.getElementById("HideShow");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+
+<div class="pub-year">
+  <button
+          style="color:#333;
+          font-size:1.25rem;
+          font-family:Lato,Helvetica Neue,Helvetica,sans-serif;
+          background-color:white;
+          font-weight:900;
+          line-height:1.25;
+          margin-top:0em;
+          margin-bottom:1em;
+          margin-left:-1em"
+          class="section-header-first"
+          onclick="HideShowElement()"> {{ include.cutoff_year }} and Before (click to expand)
+  </button>
+</div>

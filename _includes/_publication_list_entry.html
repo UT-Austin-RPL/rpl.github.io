@@ -1,0 +1,92 @@
+<div class="pub-entry">
+
+  <img class="img-responsive pub-img" src="{{ '/publications/images/' | append: publication.images.thumb | relative_url }}" loading="lazy" decoding="async" alt="{{ publication.title | escape }}">
+  <div class="pub-info">
+    <div class="pub-title"><strong>{{ publication.title }}</strong></div>
+
+    {% if publication.authors_full %}
+    <div class="pub-authors">
+      <span id="authors-short-{{ publication.url | slugify }}">{{ publication.authors }}</span>
+      <a href="javascript:void(0)"
+        onclick="document.getElementById('authors-full-{{ publication.url | slugify }}').style.display='inline';document.getElementById('authors-short-{{ publication.url | slugify }}').style.display='none';this.style.display='none';">
+        (all authors)</a>
+      <span id="authors-full-{{ publication.url | slugify }}" style="display:none">{{ publication.authors_full }}</span>
+    </div>
+    {% else %}
+    <div class="pub-authors">{{ publication.authors }}</div>
+    {% endif %}
+
+    <div class="pub-venue">
+      <i>{{ publication.pub_info_name }}, {{ publication.pub_info_date }}</i>
+    </div>
+
+    {% if publication.second_pub_info_name %}
+    <div class="pub-venue">
+      <i>{{ publication.second_pub_info_name }}, {{ publication.second_pub_info_date }}</i>
+    </div>
+    {% endif %}
+
+    {% if publication.pub_info_highlight %}
+    <div class="pub-highlight">
+      {{ publication.pub_info_highlight }}
+    </div>
+    {% endif %}
+
+    <div class="pub-description">
+      {% if publication.paper_link %}
+      <a class="btn btn-default btn-xs" href="{% include publication_url.html href=publication.paper_link %}" target="_blank" role="button">
+        <i class="fa fa-book" aria-hidden="true"></i> Paper
+      </a>
+      {% endif %}
+
+      {% if publication.journal_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.journal_link }}" target="_blank" role="button">
+        <i class="fa fa-book" aria-hidden="true"></i> Paper (Journal)
+      </a>
+      {% endif %}
+
+      {% if publication.webpage_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.webpage_link }}" target="_blank" role="button">
+        <i class="fa fa-users" aria-hidden="true"></i> Project
+      </a>
+      {% endif %}
+
+      {% if publication.demo_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.demo_link }}" target="_blank" role="button">
+        <i class="fa fa-play-circle" aria-hidden="true"></i> Demo
+      </a>
+      {% endif %}
+
+      {% if publication.video_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.video_link }}" target="_blank" role="button">
+        <i class="fa fa-video-camera" aria-hidden="true"></i> Video
+      </a>
+      {% endif %}
+
+      {% if publication.blog_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.blog_link }}" target="_blank" role="button">
+        <i class="fa fa-pencil" aria-hidden="true"></i> Blog
+      </a>
+      {% endif %}
+
+      {% if publication.slides_link %}
+      <a class="btn btn-default btn-xs" href="{% include publication_url.html href=publication.slides_link %}" target="_blank" role="button">
+        <i class="fa fa-slideshare" aria-hidden="true"></i> Slides
+      </a>
+      {% endif %}
+
+      {% if publication.code_link %}
+      <a class="btn btn-default btn-xs" href="{{ publication.code_link }}" target="_blank" role="button">
+        <i class="fa fa-code" aria-hidden="true"></i> Code
+      </a>
+      {% endif %}
+    </div>
+
+    {% if publication.note %}
+    <div class="pub-note">
+      {{ publication.note }}
+    </div>
+    {% endif %}
+  </div>
+  <hr>
+</div>

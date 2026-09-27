@@ -1,0 +1,30 @@
+<div class="pub-entry">
+
+  <img class="img-responsive pub-img" src="../media/images/{{ publication.images.thumb }}">
+
+  <div class="pub-info">
+    <div class="pub-title"><strong><a href="{{ publication.webpage_link }}">{{ publication.title }}</a></strong></div>
+    <!-- <div class="pub-authors">{{ publication.authors }}</div> -->
+    <div class="pub-venue">
+      <i>{{ publication.pub_info_name }}, {{ publication.pub_info_date }}</i>
+    </div>
+    {% if publication.second_pub_info_name %}
+    <div class="pub-venue">
+      <i>{{ publication.second_pub_info_name }}, {{ publication.second_pub_info_date }}</i>
+    </div>
+    {% endif %}
+
+    {% if publication.pub_info_highlight %}
+    <div class="pub-highlight">
+      {{ publication.pub_info_highlight }}
+    </div>
+    {% endif %}
+
+    {% if publication.excerpt %}
+    <div class="pub-note">
+      {{ publication.excerpt }}
+    </div>
+    {% endif %}
+  </div>
+  <hr>
+</div>

@@ -1,0 +1,12 @@
+{%- assign href = include.href | strip -%}
+{%- assign first = href | slice: 0, 1 -%}
+{%- assign prefix = href | slice: 0, 3 -%}
+{%- if href contains '://' or href contains 'mailto:' -%}
+  {{- href | escape -}}
+{%- elsif prefix == '../' -%}
+  {{- href | remove_first: '../' | prepend: '/' | relative_url | escape -}}
+{%- elsif first == '/' -%}
+  {{- href | relative_url | escape -}}
+{%- else -%}
+  {{- href | prepend: '/publications/' | relative_url | escape -}}
+{%- endif -%}

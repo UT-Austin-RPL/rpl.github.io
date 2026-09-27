@@ -1,0 +1,9 @@
+<div class="input-group mt-5 px-3">
+  <input id="search-input" type="search" class="form-control search-box text"
+    placeholder="Search papers..." aria-label="Search papers"
+    aria-controls="results-container"
+    data-index-url="{{ '/search.json' | relative_url }}"
+    style="padding: .5em; width: 100%; font-size: .8em; box-sizing: border-box;">
+</div>
+<ul class="px-3" id="results-container" aria-live="polite"></ul>
+<script src="{{ '/js/publication-search.js' | relative_url }}" defer></script>

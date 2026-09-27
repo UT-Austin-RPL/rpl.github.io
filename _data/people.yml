@@ -1,0 +1,388 @@
+yuke_zhu:
+  name: Yuke Zhu
+  image: yuke_zhu.jpg
+  title: Principle Investigator
+  email: yukez [at] cs.utexas.edu
+  link: //yukezhu.me/
+  category: Principal Investigator
+
+ziang_cao:
+  name: Zi-ang Cao
+  image: ziang_cao.png
+  title: Ph.D. Student, CS
+  email: ziangcao [at] cs.utexas.edu
+  link: //zi-ang-cao.github.io/
+  category: Graduate Students
+
+tianyuan_dai:
+  name: Tianyuan (Roger) Dai
+  image: tianyuan_dai.png
+  title: Ph.D. Student, CS
+  email: tydai [at] cs.utexas.edu
+  link: //rogerdai1217.github.io/
+  category: Graduate Students
+
+jake_grigsby:
+  name: Jake Grigsby
+  image: jake_grigsby.jpeg
+  title: Ph.D. Student, CS
+  email: grigsby [at] cs.utexas.edu
+  link: https://jakegrigsby.github.io 
+  category: Graduate Students
+
+yu_lei:
+  name: Yu Lei
+  image: yu_lei.png
+  title: Ph.D. Student, CS
+  email: yulei [at] cs.utexas.edu
+  link: //theknight-z.github.io/
+  category: Graduate Students
+
+kevin_lin:
+  name: Kevin Lin
+  image: kevin_lin.png
+  title: Ph.D. Student, CS
+  email: kevinlin [at] cs.utexas.edu
+  link: //kevin-thankyou-lin.github.io/
+  category: Graduate Students
+
+rutav_shah:
+  name: Rutav Shah
+  image: rutav_shah.png
+  title: Ph.D. Student, CS<br>(co-advised w/ Roberto Martín-Martín)
+  email:  rutavms [at] cs.utexas.edu
+  link: https://shahrutav.github.io/
+  category: Graduate Students
+
+abhi_maddukuri:
+  name: Abhi Maddukuri
+  image: abhi_maddukuri.jpg
+  title: Ph.D. Student, CS
+  email: abhicm [at] utexas.edu
+  link: https://abhiram824.github.io/
+  category: Graduate Students
+
+huihan_liu:
+  name: Huihan Liu
+  image: huihan_liu.png
+  title: Ph.D. Student, CS
+  email: huihanl [at] cs.utexas.edu
+  link: //huihanl.github.io/
+  year: 2026
+  category: Lab Alumni
+
+mingyo_seo:
+  name: Mingyo Seo
+  image: mingyo_seo.png
+  title: Ph.D. Student, ECE<br>(co-advised w/ Luis Sentis)
+  email: mingyo [at] utexas.edu
+  link: //mingyoseo.com/
+  year: 2026
+  category: Lab Alumni
+
+minghuan_liu:
+  name: Minghuan Liu
+  image: minghuan_liu.jpg
+  title: Postdoctoral Researcher, CS
+  email: minghuan [at] utexas.edu
+  link: //minghuanliu.com/
+  year: 2026
+  category: Lab Alumni
+
+shuijing_liu:
+  name: Shuijing Liu
+  image: shuijing_liu.png
+  title: Postdoctoral Researcher, CS
+  email: shuijing.liu [at] utexas.edu
+  link: //shuijing725.github.io/
+  year: 2026
+  category: Lab Alumni
+
+sep_nasiriany:
+  name: Sep Nasiriany
+  image: sep_nasiriany.png
+  title: Visiting Researcher
+  email: snasiriany [at] utexas.edu
+  link: https://sepnasiriany.github.io/
+  year: 2026
+  category: Lab Alumni
+
+harry_wang:
+  name: Qi Wang
+  image: harry_wang.jpg
+  title: Undergraduate, CS
+  email: harrywang [at] utexas.edu
+  link: https://www.linkedin.com/in/harry-wang-16470a211/
+  year: 2026
+  category: Lab Alumni
+
+pengen_zheng:
+  name: Pengen (Michael) Zheng
+  image: pengen_zheng.jpg
+  title: Undergraduate, CS & Math
+  email: michaelpengenzheng [at] utexas.edu
+  link: https://www.linkedin.com/in/pengen-zheng-135657186/
+  year: 2026
+  category: Lab Alumni
+
+justin_sasek:
+  name: Justin Sasek
+  image: justin_sasek.jpg
+  title: Undergraduate, CS & Business
+  email: justinsasek [at] utexas.edu
+  link: https://www.linkedin.com/in/justinsasek
+  year: 2026
+  category: Lab Alumni
+
+yifeng_zhu:  
+  name: Yifeng Zhu  
+  image: yifeng_zhu.png  
+  title: Ph.D. Student, CS
+  email: yifeng.zhu [at] utexas.edu
+  link: //cs.utexas.edu/~yifengz    
+  year: 2025
+  category: Lab Alumni
+
+zhenyu_jiang:
+  name: Zhenyu Jiang
+  image: zhenyu_jiang.jpg
+  title: Ph.D. Student, CS
+  email: zhenyu [at] cs.utexas.edu
+  link: //zhenyujiang.me/
+  year: 2025
+  category: Lab Alumni
+
+soroush_nasiriany:
+  name: Soroush Nasiriany
+  image: soroush_nasiriany.png
+  title: Ph.D. Student, CS
+  email: soroush [at] cs.utexas.edu
+  link: http://snasiriany.me/
+  year: 2025
+  category: Lab Alumni
+
+yuqi_xie:
+  name: Yuqi Xie
+  image: yuqi_xie.png
+  title: Master's, CS
+  email: xieleo [at] utexas.edu
+  link: https://xieleo5.github.io/
+  year: 2025
+  category: Lab Alumni
+
+changyeon_kim:
+  name: Changyeon Kim
+  image: changyeon_kim.jpg
+  title: Visiting Researcher, KAIST
+  email: changyeon.kim [at] utexas.edu
+  link: https://changyeon.page
+  year: 2025
+  category: Lab Alumni
+
+steven_zheng:
+  name: Steven Zheng
+  image: steven_zheng.jpg
+  title: Undergraduate, CS
+  email: steven.zheng [at] utexas.edu
+  link: https://www.linkedin.com/in/steven-zheng-bb7243253/
+  year: 2025
+  category: Lab Alumni
+
+jack_pittenger:
+  name: Jack Pittenger
+  image: jack_pittenger.jpg
+  title: Undergraduate, CS & Math 
+  email: jackpittenger [at] utexas.edu
+  link: https://www.linkedin.com/in/jack-pittenger/
+  year: 2025
+  category: Lab Alumni
+
+crystal_ding:
+  name: Crystal Ding
+  image: crystal_ding.jpg
+  title: Undergraduate, CS
+  email: crystald [at] utexas.edu
+  link: https://www.linkedin.com/in/ding-crystal/
+  year: 2025
+  category: Lab Alumni
+
+james_liu:
+  name: James Liu
+  image: james_liu.png
+  title: Undergraduate, CS & Math
+  email: jamesliu2003 [at] utexas.edu
+  link: https://www.linkedin.com/in/jamesshuangliu/
+  year: 2025
+  category: Lab Alumni
+
+arisrei_lim:
+    name: Arisrei Lim
+    image: arisrei_lim.jpg
+    title: Undergraduate, CS & Math
+    email: arisrei [at] utexas.edu
+    link: https://www.linkedin.com/in/arisrei-lim/
+    year: 2025
+    category: Lab Alumni
+
+abhishek_joshi:
+  name: Abhishek Joshi
+  image: abhishek_joshi.jpg
+  title: Undergraduate, CS & Math
+  email: ahjoshi [at] utexas.edu
+  link: //www.linkedin.com/in/abhishek-joshi-4ab469180/
+  year: 2024
+  category: Lab Alumni
+
+lance_zhang:
+  name: Lance Zhang
+  image: lance_zhang.jpg
+  title: Undergraduate, CS
+  email: lzhang26 [at] utexas.edu
+  link: 
+  year: 2024
+  category: Lab Alumni
+
+aaron_lo:
+    name: Aaron Lo
+    image: aaron_lo.jpg
+    title: Undergraduate, CS
+    email: atlo [at] utexas.edu
+    link: https://www.linkedin.com/in/aaron-lo-18a6871b3/
+    year: 2024
+    category: Lab Alumni
+
+jinhan_li:
+    name: Jinhan Li
+    image: jinhan_li.jpg
+    title: Visiting Researcher, Tsinghua University
+    email: lijinhan21 [at] mails.tsinghua.edu.cn
+    link: ""
+    year: 2024
+    category: Lab Alumni 
+
+yu_zhang:
+    name: Yu Zhang
+    image: yu_zhang.jpg
+    title: Visiting Researcher, ShanghaiTech University
+    email: yu.zhang [at] austin.utexas.edu
+    link: https://www.linkedin.com/in/yu-zhang-b004a9290?trk=contact-info
+    year: 2024
+    category: Lab Alumni
+
+
+hyeyoung_chung:
+    name: Hye-Young Chung
+    image: hyeyoung_chung.jpg
+    title: Undergraduate, ECE
+    email: hyeyoung.chung [at] utexas.edu
+    link:
+    year: 2023
+    category: Lab Alumni
+
+kyutae_sim:
+    name: Kyutae Sim
+    image: kyutae_sim.jpg
+    title: Undergraduate, CS & Math
+    email: ksim3213 [at] utexas.edu
+    link: https://www.linkedin.com/in/kyutae-sim-888593166/
+    year: 2023    
+    category: Lab Alumni
+
+weikang_wan:
+  name: Weikang Wan
+  image: weikang_wan.jpg
+  title: Visiting Researcher, Peking University
+  email: wwk01510 [at] gmail.com
+  link: https://wkwan7.github.io/
+  year: 2023
+  category: Lab Alumni
+
+quantao_yang:
+  name: Quantao Yang
+  image: quantao_yang.jpg
+  title: Visiting Researcher, Örebro University
+  email: quantao.yang [at] utexas.edu 
+  link: https://yquantao.github.io/
+  year: 2023
+  category: Lab Alumni
+
+steve_han:
+  name: Steve Han
+  image: steve_han.jpg
+  title: Master's, CS
+  email: stevehan2001 [at] utexas.edu
+  link: //www.linkedin.com/in/stevehan2001
+  year: 2023
+  category: Lab Alumni
+
+chengchun_hsu:
+  name: Cheng-Chun Hsu
+  image: chengchun_hsu.jpg
+  title: Master's, CS
+  email: chengchun [at] utexas.edu
+  link: https://chengchunhsu.github.io/
+  year: 2023
+  category: Lab Alumni
+
+braham_snyder:
+  name: Braham Snyder
+  image: braham_snyder.jpg
+  title: Master's, CS
+  email: braham [at] utexas.edu
+  link: https://braham.io/
+  year: 2023
+  category: Lab Alumni
+
+pranav_atreya:
+  name: Pranav Atreya
+  image: pranav_atreya.png
+  title: Undergraduate, CS
+  email: pranavatreya [at] utexas.edu
+  link: https://pranavatreya.github.io/
+  year: 2023
+  category: Lab Alumni
+
+tian_gao:
+  name: Tian Gao
+  image: tian_gao.jpg
+  title: Visiting Researcher, Tsinghua University
+  email: skybhh19 [at] gmail.com
+  link: https://skybhh19.github.io/ 
+  year: 2023
+  category: Lab Alumni
+
+jierui_lin:
+  name: Jierui Lin
+  image: jierui_lin.jpg
+  title: Master's, CS
+  email: jerrylin [at] utexas.edu
+  link: //jieruilin.github.io/
+  year: 2022
+  category: Lab Alumni
+
+zhiyao_bao:
+  name: Zhiyao Bao
+  image: zhiyao_bao.jpg
+  title: Undergraduate, CS
+  email: zhiyaobao [at] utexas.edu
+  link: //www.linkedin.com/in/zhiyao-bao/
+  year: 2022
+  category: Lab Alumni
+
+aditya_arjun:
+  name: Aditya Arjun
+  image: aditya_arjun.jpg
+  title: Undergraduate, CS Turing Scholar
+  email: aditya_arj [at] utexas.edu
+  link: //www.linkedin.com/in/aditya-arjun-b4608416b/
+  year: 2022
+  category: Lab Alumni
+
+alexy_skoutnev:
+  name: Alexy Skoutnev
+  image: alexy_skoutnev.jpg
+  title: Undergraduate, Math & ME
+  email: alexyskoutnev [at] utexas.edu
+  link: https://alexyskoutnev.github.io/alexyskoutnev-github.io/index.html 
+  year: 2022
+  category: Lab Alumni

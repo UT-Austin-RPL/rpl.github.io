@@ -1,0 +1,15 @@
+---
+layout: publication
+title: "SECANT: Self-Expert Cloning for Zero-Shot Generalization of Visual Policies"
+authors: "Linxi Fan, Guanzhi Wang, De-An Huang, Zhiding Yu, Li Fei-Fei, Yuke Zhu, Anima Anandkumar"
+pub_info_name: "International Conference on Machine Learning (ICML)"
+pub_info_date: July 2021
+excerpt: text text text
+images:
+  thumb: fan-icml21-secant.png
+  main: fan-icml21-secant.png
+paper_link: "https://arxiv.org/abs/2106.09678"
+webpage_link: "https://drjimfan.github.io/secant-site/"
+code_link: "https://github.com/LinxiFan/SECANT"
+---
+Generalization has been a long-standing challenge for reinforcement learning (RL). Visual RL, in particular, can be easily distracted by irrelevant factors in high-dimensional observation space. In this work, we consider robust policy learning which targets zero-shot generalization to unseen visual environments with large distributional shift. We propose SECANT, a novel self-expert cloning technique that leverages image augmentation in two stages to decouple robust representation learning from policy optimization. Specifically, an expert policy is first trained by RL from scratch with weak augmentations. A student network then learns to mimic the expert policy by supervised learning with strong augmentations, making its representation more robust against visual variations compared to the expert. Extensive experiments demonstrate that SECANT significantly advances the state of the art in zero-shot generalization across 4 challenging domains. Our average reward improvements over prior SOTAs are: DeepMind Control (+26.5%), robotic manipulation (+337.8%), vision-based autonomous driving (+47.7%), and indoor object navigation (+15.8%).

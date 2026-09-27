@@ -1,0 +1,16 @@
+---
+layout: publication
+title: "One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation"
+authors: "Zhendong Wang, Zhaoshuo Li, Ajay Mandlekar, Zhenjia Xu, Jiaojiao Fan, Yashraj Narang, Linxi Fan, Yuke Zhu, Yogesh Balaji, Mingyuan Zhou, Ming-Yu Liu, Yu Zeng"
+pub_info_name: "International Conference on Machine Learning (ICML)"
+pub_info_date: July 2025
+excerpt: text text text
+images:
+  thumb: wang-icml25-onestep.png
+  main: wang-icml25-onestep.png 
+paper_link: "https://arxiv.org/abs/2410.21257"
+webpage_link: "https://research.nvidia.com/labs/dir/onedp"
+---
+Diffusion models, praised for their success in generative tasks, are increasingly being applied to robotics, demonstrating exceptional performance in behavior cloning. However, their slow generation process stemming from iterative denoising steps poses a challenge for real-time applications in resource-constrained robotics setups and dynamically changing environments. In this paper, we introduce the One-Step Diffusion Policy (OneDP), a novel approach that distills knowledge from pre-trained diffusion policies into a single-step action generator, significantly accelerating response times for robotic control tasks. We ensure the distilled generator closely aligns with the original policy distribution by minimizing the Kullback-Leibler (KL) divergence along the diffusion chain, requiring only 2%-10% additional pre-training cost for convergence. We evaluated OneDP on 6 challenging simulation tasks as well as 4 self-designed real-world tasks using the Franka robot. The results demonstrate that OneDP not only achieves state-of-the-art success rates but also delivers an order-of-magnitude improvement in inference speed, boosting action prediction frequency from 1.5 Hz to 62 Hz, establishing its potential for dynamic and computationally constrained robotic applications.	
+
+	
