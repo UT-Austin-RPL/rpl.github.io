@@ -63,7 +63,11 @@ layout: default
 
   {% if page.webpage_link %}
   <a class="btn btn-default btn-xs" href="{{ page.webpage_link }}" target="_blank" role="button">
+    {% if page.categories contains 'media' %}
+    <i class="fa fa-external-link" aria-hidden="true"></i> Original article
+    {% else %}
     <i class="fa fa-users" aria-hidden="true"></i> Project
+    {% endif %}
   </a>
   {% endif %}
 

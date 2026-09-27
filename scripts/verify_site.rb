@@ -17,6 +17,10 @@ Find.find(root) do |path|
   files << path if File.file?(path)
 end
 size = files.sum { |file| File.size(file) }
+legacy_media = YAML.safe_load(File.read(File.expand_path("../_data/legacy_media_paths.yml", __dir__)))
+legacy_media.each do |path|
+  errors << "Missing legacy media path: #{path}" unless File.file?(File.join(root, path.delete_prefix("/")))
+end
 limit = Integer(ENV.fetch("MAX_SITE_BYTES", "950000000"))
 errors << "Published site is #{size} bytes (budget #{limit})" if size >= limit
 %w[cs343_spring2021 cs343_spring2022 cs343_spring2023 cs343h_fall2024
@@ -88,3 +92,4 @@ end
 puts "Validated #{html_files.length} HTML pages and #{index.length} publication search entries."
 puts "Published size: #{size} bytes (#{(size / 1_000_000.0).round(1)} MB); budget: #{limit} bytes."
 puts "No course archives, deployment scripts, or scratch files in the published site."
+puts "Preserved all #{legacy_media.size} legacy media article and image paths."

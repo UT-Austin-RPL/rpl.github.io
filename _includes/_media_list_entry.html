@@ -1,6 +1,6 @@
 <div class="pub-entry">
 
-  <img class="img-responsive pub-img" src="../media/images/{{ publication.images.thumb }}">
+  <img class="img-responsive pub-img" src="{{ '/media/images/' | append: publication.images.thumb | relative_url }}" alt="{{ publication.pub_info_name | escape }}" loading="lazy">
 
   <div class="pub-info">
     <div class="pub-title"><strong><a href="{{ publication.webpage_link }}">{{ publication.title }}</a></strong></div>
@@ -25,6 +25,7 @@
       {{ publication.excerpt }}
     </div>
     {% endif %}
+    <p><a href="{{ publication.url | relative_url }}">Archive entry</a></p>
   </div>
   <hr>
 </div>

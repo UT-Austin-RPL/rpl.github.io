@@ -3,7 +3,7 @@
 This repository hosts the Robot Perception and Learning Lab website.
 
 - Repository: `UT-Austin-RPL/rpl.github.io`
-- Planned public URL: https://ut-austin-rpl.github.io/rpl.github.io/
+- Public URL: https://ut-austin-rpl.github.io/rpl.github.io/
 - Generator: Jekyll, using the existing lab site's theme and content.
 - Source snapshot: `UT-Austin-RPL/RPL-group-website` at `f1a0aba`, with the locally approved HumanoidMimicGen workshop removal included.
 
@@ -15,7 +15,7 @@ Use English for all repository documentation, website text, code and configurati
 
 This migration includes all of `publications/` (posts, images, paper PDFs, and downloadable resources), `talks/`, `_data/people.yml`, the People page, and `images/members/`. It also retains the home, Research, Robots, Opportunities, and Teaching index pages, along with their styles and images.
 
-The four course submodules, course files, historical Media posts, UTCS deployment scripts, and local working directories are not included in this phase. Course links on the Teaching index continue to point to UTCS. No submodule initialization or cleanup commands are needed.
+The Media archive includes all 18 historical press records and their 10 publisher images, preserving their original URLs. It is linked from the Research page. The four course submodules, course files, UTCS deployment scripts, and local working directories are not included. Course links on the Teaching index continue to point to UTCS. No submodule initialization or cleanup commands are needed.
 
 Original papers, slides, and member images are copied byte for byte; PDFs are neither compressed nor rewritten. Build validation limits the published site to 950,000,000 bytes to leave headroom below the GitHub Pages 1 GB limit. Exceeding this budget stops deployment; it never deletes content automatically.
 
@@ -38,7 +38,7 @@ JEKYLL_ENV=production bundle exec jekyll build
 bundle exec ruby scripts/verify_site.rb
 ```
 
-Validation checks internal links and assets across generated pages, the publication search index, RSS, the sitemap, canonical URLs, published size, and course exclusions. It does not make bulk requests to external publication websites.
+Validation checks internal links and assets across generated pages, the publication search index, RSS, the sitemap, canonical URLs, published size, course exclusions, and every legacy Media article and image path listed in `_data/legacy_media_paths.yml`. It does not make bulk requests to external publication websites.
 
 ## Enable GitHub Pages for the first time
 
@@ -56,6 +56,7 @@ Subsequent pushes to `main` automatically build, validate, and deploy the site. 
 - Publications: `publications/_posts/` and `publications/images/`.
 - People: `_data/people.yml` and `images/members/`.
 - Talks: `talks/` and `_pages/research.md`.
+- Media archive: `media/_posts/`, `media/images/`, and `media/index.html`.
 - Images and internal links: use `relative_url`. For full URLs, such as canonical and RSS links, use `absolute_url`. Avoid hardcoding the GitHub project subpath.
 - Dependencies: commit `Gemfile.lock`. It includes both macOS and Linux platforms so Actions installs the same dependency versions.
 
@@ -71,7 +72,7 @@ After building, run `bundle exec ruby scripts/test_publication_sort.rb` to check
 
 ## UTCS redirects while courses remain on UTCS
 
-Redirects from the old domain must be configured by the UTCS administrators; this repository alone cannot implement them. Verify the GitHub-hosted site before enabling redirects.
+Redirects are configured in the UTCS web root, not by GitHub Pages. Apache `.htaccess` support has been verified with an isolated test. See `docs/utcs-forwarding/` for the configuration and operating instructions. Publish and verify the GitHub-hosted archives before enabling redirects.
 
 **Do not redirect the entire old site unconditionally.** The following content remains on UTCS during this phase and must be excluded first:
 
@@ -79,9 +80,10 @@ Redirects from the old domain must be configured by the UTCS administrators; thi
 - `/cs343_spring2022/`
 - `/cs343_spring2023/`
 - `/cs343h_fall2024/`
-- `/media/` and any other archived content not migrated into this repository.
 
-Redirect only migrated pages and directories, such as the home page, `/people/`, `/publications/`, `/research/`, `/talks/`, `/images/`, `/robots/`, `/opportunities/`, `/postdoc-openings/`, `/teaching/`, and required style assets. Preserve query parameters.
+All other website content redirects to GitHub, including Media, talks, images, and styles. The only technical exceptions are the retiring root service worker (`/sw.js`) and HTTPS certificate challenges (`/.well-known/acme-challenge/`). Query parameters are preserved. Keep UTCS hosting, DNS, and HTTPS active for courses and redirects.
+
+The 47 historical pagination URLs (`/page2/` through `/page48/`) contained exactly the same main content as the homepage; redirect them to the new homepage. Redirect the obsolete `/fb-instant-articles.xml` feed to `/feed.xml`, and the `/talks/` directory entry to the Research page, where the talks are listed.
 
 Use `https://ut-austin-rpl.github.io/rpl.github.io/<original-path>` as the temporary destination. A 302 redirect is appropriate until the custom domain is finalized. Once the final domain is stable, update redirects to point directly to it.
 
@@ -92,6 +94,8 @@ Historical PDF filenames need explicit mappings that take precedence over genera
 - `2024_11_04_data_pyramid_and_data_flywheel_for_robotic_foundation_models.pdf` → `data_pyramid_and_data_flywheel_for_robotic_foundation_models.pdf`
 
 Configure these PDF mappings as HTTP redirects on the old server. GitHub Pages does not execute Apache `.htaccess` files.
+
+After forwarding is enabled, update the main website only through this GitHub repository. Do not run the old whole-site UTCS deployment scripts: they could overwrite the retiring service worker. Course deployments should target only their respective course directories.
 
 ## Add a custom domain later
 

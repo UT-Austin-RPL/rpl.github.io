@@ -9,6 +9,8 @@ tags: research
 
 [RPL YouTube Channel](https://www.youtube.com/channel/UCH3TGGcTeLMYBhNfuaglwHw/videos)
 
+[Media coverage archive]({{ '/media/' | relative_url }})
+
 ----------
 
 #### Talks and Tutorials

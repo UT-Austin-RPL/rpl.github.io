@@ -1,0 +1,12 @@
+---
+layout: page
+title: Media Archive
+permalink: /media/
+---
+
+<p>Press coverage of the lab's research. Original articles are hosted by their respective publishers.</p>
+
+{% assign coverage = site.categories.media | sort_publications %}
+{% for publication in coverage %}
+  {% include _media_list_entry.html %}
+{% endfor %}
