@@ -7,17 +7,21 @@ This repository hosts the Robot Perception and Learning Lab website.
 - Generator: Jekyll, using the existing lab site's theme and content.
 - Source snapshot: `UT-Austin-RPL/RPL-group-website` at `f1a0aba`, with the locally approved HumanoidMimicGen workshop removal included.
 
-## 本次迁移范围
+## Repository language
 
-完整迁入 `publications/`（文章、图片、论文 PDF 和资源下载）、`talks/`、`_data/people.yml`、People 页面和 `images/members/`。同时保留首页、Research、Robots、Opportunities、Teaching 索引及其样式和图片。
+Use English for all repository documentation, website text, code and configuration comments, and commit messages.
 
-本阶段不迁入四个课程子模块、课程文件、历史 Media 文章、UTCS 部署脚本或本地工作目录。Teaching 索引中的课程链接继续访问 UTCS。无需运行任何子模块初始化或清理命令。
+## Migration scope
 
-所有原始论文、slides、人员图片按原字节复制，没有压缩或改写 PDF。构建检查将发布目录限制为 950,000,000 bytes，给 GitHub Pages 的 1 GB 限制留出余量。超过预算会停止发布，不会自动删除内容。
+This migration includes all of `publications/` (posts, images, paper PDFs, and downloadable resources), `talks/`, `_data/people.yml`, the People page, and `images/members/`. It also retains the home, Research, Robots, Opportunities, and Teaching index pages, along with their styles and images.
 
-## 本地预览
+The four course submodules, course files, historical Media posts, UTCS deployment scripts, and local working directories are not included in this phase. Course links on the Teaching index continue to point to UTCS. No submodule initialization or cleanup commands are needed.
 
-使用 `.ruby-version` 中指定的 Ruby 3.2.4 和 Bundler 2.4.19：
+Original papers, slides, and member images are copied byte for byte; PDFs are neither compressed nor rewritten. Build validation limits the published site to 950,000,000 bytes to leave headroom below the GitHub Pages 1 GB limit. Exceeding this budget stops deployment; it never deletes content automatically.
+
+## Local preview
+
+Use Ruby 3.2.4, as specified in `.ruby-version`, and Bundler 2.4.19:
 
 ```sh
 gem install bundler -v 2.4.19
@@ -25,67 +29,67 @@ bundle install
 bundle exec jekyll serve
 ```
 
-打开 http://127.0.0.1:4000/rpl.github.io/ 。预览时保留子路径，可以尽早发现 GitHub Pages 上的路径问题。
+Open http://127.0.0.1:4000/rpl.github.io/ . Keep the project subpath during local preview so GitHub Pages path issues are caught early.
 
-构建与检查：
+Build and validate:
 
 ```sh
 JEKYLL_ENV=production bundle exec jekyll build
 bundle exec ruby scripts/verify_site.rb
 ```
 
-检查覆盖所有生成页面的站内链接和资源、论文搜索索引、RSS、sitemap、canonical 地址、发布体积和课程排除。不会对外部论文网站进行批量请求。
+Validation checks internal links and assets across generated pages, the publication search index, RSS, the sitemap, canonical URLs, published size, and course exclusions. It does not make bulk requests to external publication websites.
 
-## 首次在 GitHub 开启发布
+## Enable GitHub Pages for the first time
 
-1. 在本仓库创建首次提交并推送到 `main`。
-2. 打开 GitHub 仓库 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions**。
-3. 在 **Actions → Build and deploy GitHub Pages** 中运行工作流；如果首次 push 的任务因 Pages 尚未开启而失败，启用后重新运行。
-4. 确認工作流成功，以及首页、People、Publications、Research 和重点 PDF 的公开地址可访问。
+1. Create the initial commit in this repository and push it to `main`.
+2. In the GitHub repository, open **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**.
+3. Run **Actions → Build and deploy GitHub Pages**. If the first push triggered a failed run before Pages was enabled, enable Pages and rerun the workflow.
+4. Confirm that the workflow succeeds and that the public home, People, Publications, and Research pages and key PDFs are accessible.
 
-仓库当前还没有绑定自定义域名；不要复制旧仓库中的 `CNAME`（其内容为无关的 `yukezhu.com`）。GitHub Pages 自定义 Actions 发布以 Pages 设置中的域名为准，不依赖该文件。
+No custom domain is configured yet. Do not copy the old repository's `CNAME`, which contains the unrelated domain `yukezhu.com`. Custom GitHub Actions deployments use the domain configured in Pages settings and do not require that file.
 
-之后 push 到 `main` 会自动构建、验证、发布；PR 只构建和验证。工作流不连接 UTCS、不需要 SSH 密钥、不获取课程子模块。
+Subsequent pushes to `main` automatically build, validate, and deploy the site. Pull requests only build and validate. The workflow does not connect to UTCS, require SSH keys, or fetch course submodules.
 
-## 常见内容更新
+## Common content updates
 
-- 论文：`publications/_posts/` 和 `publications/images/`。
-- 人员：`_data/people.yml` 和 `images/members/`。
-- 演讲：`talks/` 和 `_pages/research.md`。
-- 图片/站内链接：使用 `relative_url`；canonical、RSS 等完整地址使用 `absolute_url`，避免硬编码 GitHub 项目子路径。
-- 依赖：提交 `Gemfile.lock`；它同时包含 macOS 和 Linux 平台，以便 Actions 安装相同版本。
+- Publications: `publications/_posts/` and `publications/images/`.
+- People: `_data/people.yml` and `images/members/`.
+- Talks: `talks/` and `_pages/research.md`.
+- Images and internal links: use `relative_url`. For full URLs, such as canonical and RSS links, use `absolute_url`. Avoid hardcoding the GitHub project subpath.
+- Dependencies: commit `Gemfile.lock`. It includes both macOS and Linux platforms so Actions installs the same dependency versions.
 
-## UTCS 转发：课程暂不迁移
+## UTCS redirects while courses remain on UTCS
 
-旧域名的转发由 UTCS 管理员配置，不能仅靠本仓库实现。必须先验证 GitHub 版本，再启用转发。
+Redirects from the old domain must be configured by the UTCS administrators; this repository alone cannot implement them. Verify the GitHub-hosted site before enabling redirects.
 
-**不能对整个旧站无条件转发。** 以下内容本阶段仍留在原站，必须先排除：
+**Do not redirect the entire old site unconditionally.** The following content remains on UTCS during this phase and must be excluded first:
 
 - `/cs343_spring2021/`
 - `/cs343_spring2022/`
 - `/cs343_spring2023/`
 - `/cs343h_fall2024/`
-- `/media/`，以及任何未迁入本仓库的其他归档内容。
+- `/media/` and any other archived content not migrated into this repository.
 
-建议只转发已经迁入的页面和目录，例如首页、`/people/`、`/publications/`、`/research/`、`/talks/`、`/images/`、`/robots/`、`/opportunities/`、`/postdoc-openings/`、`/teaching/` 和必要样式资源，并保留查询参数。
+Redirect only migrated pages and directories, such as the home page, `/people/`, `/publications/`, `/research/`, `/talks/`, `/images/`, `/robots/`, `/opportunities/`, `/postdoc-openings/`, `/teaching/`, and required style assets. Preserve query parameters.
 
-临时目标：`https://ut-austin-rpl.github.io/rpl.github.io/<原路径>`。自定义域名确定前可以使用 302；最终域名稳定后改为直接跳转到最终地址。
+Use `https://ut-austin-rpl.github.io/rpl.github.io/<original-path>` as the temporary destination. A 302 redirect is appropriate until the custom domain is finalized. Once the final domain is stable, update redirects to point directly to it.
 
-历史 PDF 文件名需要独立映射，优先于普通目录转发：
+Historical PDF filenames need explicit mappings that take precedence over general directory redirects:
 
 - `2026_06_03_building_generalist_humanoid_robots.pdf` → `building_generalist_humanoid_robots.pdf`
 - `2025_10_31_towards_generalist_humanoid_robots.pdf` → `towards_generalist_humanoid_robots.pdf`
 - `2024_11_04_data_pyramid_and_data_flywheel_for_robotic_foundation_models.pdf` → `data_pyramid_and_data_flywheel_for_robotic_foundation_models.pdf`
 
-这些 PDF 映射由旧站的 HTTP 重定向配置处理；GitHub Pages 不执行 Apache `.htaccess`。
+Configure these PDF mappings as HTTP redirects on the old server. GitHub Pages does not execute Apache `.htaccess` files.
 
-## 以后使用自定义域名
+## Add a custom domain later
 
-域名确定后，在 GitHub Pages 设置中添加域名并配置 DNS/HTTPS，然后修改 `_config.yml` 的两个字段：
+Once the domain is chosen, add it in GitHub Pages settings and configure DNS and HTTPS. Then update these two fields in `_config.yml`:
 
 ```yaml
-url: "https://你的新域名"
+url: "https://your-new-domain.example"
 baseurl: ""
 ```
 
-重新构建、运行检查并发布。UTCS 转发也应直接指向新域名，继续保留课程路径例外。网站上的课程链接仍需要 UTCS 服务，直到另行迁移课程。
+Rebuild, validate, and deploy. Update UTCS redirects to point directly to the new domain while preserving course-path exclusions. Course links still depend on UTCS hosting until a separate course migration is completed.
