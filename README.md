@@ -59,6 +59,16 @@ Subsequent pushes to `main` automatically build, validate, and deploy the site. 
 - Images and internal links: use `relative_url`. For full URLs, such as canonical and RSS links, use `absolute_url`. Avoid hardcoding the GitHub project subpath.
 - Dependencies: commit `Gemfile.lock`. It includes both macOS and Linux platforms so Actions installs the same dependency versions.
 
+### Publication ordering
+
+The Publications page uses one deterministic ordering rule: calendar date descending, full title A–Z (case-insensitive) within the same day, then source path ascending to break exact ties. Time of day does not affect the order within a date.
+
+An explicit front-matter `date` overrides the date in the filename. To move a paper ahead of entries dated `2026-11-09`, set `date: 2026-11-10`, as done for EgoScale. Keep its filename and explicit `permalink` unchanged to preserve existing URLs. The displayed conference label comes from `pub_info_date`, not the sorting date.
+
+Changing `date` also changes the post date used by Jekyll, including the RSS feed and search index; it is not a separate highlight flag.
+
+After building, run `bundle exec ruby scripts/test_publication_sort.rb` to check tie-breaking, shuffled inputs, and the order of all entries in the generated Publications page. The Pages workflow runs this check before deployment.
+
 ## UTCS redirects while courses remain on UTCS
 
 Redirects from the old domain must be configured by the UTCS administrators; this repository alone cannot implement them. Verify the GitHub-hosted site before enabling redirects.

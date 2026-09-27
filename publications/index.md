@@ -13,7 +13,7 @@ tags: publications
   
   <p><div class="pub-note">* Equal contribution.&nbsp;&nbsp;&dagger; Equal advising.</div></p>
   
-  {% assign publications_sorted = site.categories.publications | sort: 'date' | reverse %}
+  {% assign publications_sorted = site.categories.publications | sort_publications %}
   {% if publications_sorted.size > 0 %}
     {% assign first_publication_year = publications_sorted.first.date | date: '%Y' %}
   {% else %}

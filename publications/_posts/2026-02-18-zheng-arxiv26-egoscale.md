@@ -1,6 +1,6 @@
 ---
 layout: publication
-date: 2026-11-09
+date: 2026-11-10
 permalink: /publications/2026/02/18/zheng-arxiv26-egoscale/
 title: "EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data"
 authors: "Ruijie Zheng*, Dantong Niu*, Yuqi Xie*, Jing Wang, Mengda Xu, Yunfan Jiang, Fernando Castañeda, Fengyuan Hu, You Liang Tan, Letian Fu, Trevor Darrell, Furong Huang, Yuke Zhu&dagger;, Danfei Xu&dagger;, Linxi Fan&dagger;"
