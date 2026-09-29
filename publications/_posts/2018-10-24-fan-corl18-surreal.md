@@ -9,7 +9,7 @@ images:
   thumb: fan-surreal-corl18.png
   main: fan-surreal-corl18.png
 paper_link: "papers/fan-surreal-corl18.pdf"
-webpage_link: "http://surreal.stanford.edu"
+webpage_link: "https://github.com/SurrealAI/surreal"
 video_link: "https://www.youtube.com/watch?v=efeS9AczbTk"
 code_link: "https://github.com/SurrealAI/Surreal"
 note: "* indicates equal contribution"

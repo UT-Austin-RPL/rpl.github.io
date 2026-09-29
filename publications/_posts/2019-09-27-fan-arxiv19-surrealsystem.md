@@ -9,7 +9,7 @@ images:
   thumb: fan-arxiv19-surrealsystem.png
   main: fan-arxiv19-surrealsystem.png
 paper_link: "papers/fan-arxiv19-surrealsystem.pdf"
-webpage_link: "http://surreal.stanford.edu"
+webpage_link: "https://github.com/SurrealAI/surreal"
 code_link: "https://github.com/SurrealAI"
 note: "* indicates equal contribution"
 ---

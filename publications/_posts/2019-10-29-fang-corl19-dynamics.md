@@ -10,7 +10,7 @@ images:
   thumb: fang-corl19-dynamics.png
   main: fang-corl19-dynamics.png
 paper_link: "papers/fang-corl19-dynamics.pdf"
-webpage_link: "http://pair.stanford.edu/cavin/"
+webpage_link: "https://github.com/StanfordVL/cavin"
 code_link: "https://github.com/StanfordVL/cavin"
 blog_link: "http://ai.stanford.edu/blog/cavin/"
 ---

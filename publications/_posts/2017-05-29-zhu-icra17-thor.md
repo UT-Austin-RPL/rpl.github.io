@@ -8,7 +8,7 @@ excerpt: text text text
 images:
   thumb: zhu-icra17-thor.png
   main: zhu-icra17-thor.png
-paper_link: "https://web.stanford.edu/~yukez/papers/icra2017.pdf"
+paper_link: "papers/icra2017.pdf"
 webpage_link: "https://ai2thor.allenai.org/"
 video_link: "https://www.youtube.com/watch?v=SmBxMDiOrvs&feature=youtu.be"
 ---
