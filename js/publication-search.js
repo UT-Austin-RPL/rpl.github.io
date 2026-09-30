@@ -6,9 +6,30 @@
   let loaded = false;
   let failed = false;
 
+  const MAX_RESULTS = 30;
+
   function showMessage(message) {
     const item = document.createElement("li");
+    item.className = "search-message";
     item.textContent = message;
+    results.appendChild(item);
+  }
+
+  function renderPaper(paper) {
+    const item = document.createElement("li");
+    item.className = "search-result";
+    const link = document.createElement("a");
+    link.className = "search-result-title";
+    link.href = paper.url;
+    link.textContent = paper.title;
+    item.appendChild(link);
+    const venue = [paper.venue, paper.venue_date].filter(Boolean).join(", ");
+    if (venue) {
+      const meta = document.createElement("div");
+      meta.className = "search-result-meta";
+      meta.textContent = venue;
+      item.appendChild(meta);
+    }
     results.appendChild(item);
   }
 
@@ -20,16 +41,12 @@
     if (!loaded) return showMessage("Loading papers...");
     const matches = papers.filter((paper) =>
       paper.title.toLocaleLowerCase().includes(query)
-    ).slice(0, 30);
+    );
     if (!matches.length) return showMessage("No results found");
-    matches.forEach((paper) => {
-      const item = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = paper.url;
-      link.textContent = paper.title;
-      item.appendChild(link);
-      results.appendChild(item);
-    });
+    showMessage(matches.length > MAX_RESULTS
+      ? `Showing the first ${MAX_RESULTS} of ${matches.length} papers`
+      : `${matches.length} ${matches.length === 1 ? "paper" : "papers"} found`);
+    matches.slice(0, MAX_RESULTS).forEach(renderPaper);
   }
 
   input.addEventListener("input", render);
