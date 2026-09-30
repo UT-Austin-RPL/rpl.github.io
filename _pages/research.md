@@ -9,7 +9,7 @@ tags: research
 
 [RPL YouTube Channel](https://www.youtube.com/channel/UCH3TGGcTeLMYBhNfuaglwHw/videos)
 
-[Media coverage archive]({{ '/media/' | relative_url }})
+[Media Coverage Archive]({{ '/media/' | relative_url }})
 
 ----------
 
@@ -71,6 +71,21 @@ We devote effort to making scientific research more reproducible and making know
 
 #### Selected Media Coverage
 
+{% comment %} Show coverage from the past four years (relative to the build date); fold older articles. {% endcomment %}
+{% assign media_cutoff = site.time | date: '%s' | minus: 126230400 %}
 {% for publication in site.categories.media %}
+  {% assign published = publication.date | date: '%s' | plus: 0 %}
+  {% if published >= media_cutoff %}
   {% include _media_list_entry.html %}
+  {% endif %}
 {% endfor %}
+
+<details class="media-more">
+<summary><span class="media-more-show">[See more]</span><span class="media-more-hide">[See less]</span></summary>
+{% for publication in site.categories.media %}
+  {% assign published = publication.date | date: '%s' | plus: 0 %}
+  {% if published < media_cutoff %}
+  {% include _media_list_entry.html %}
+  {% endif %}
+{% endfor %}
+</details>

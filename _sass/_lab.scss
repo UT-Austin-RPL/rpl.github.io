@@ -28,3 +28,37 @@
 .people-title {
   margin: 0rem 0 1rem 0;
 }
+
+// Sit closer to the last entry's divider.
+.media-more {
+  margin-top: -25px;
+}
+
+.media-more summary {
+  display: block;
+  width: fit-content;
+  // Match the article title size, unbolded.
+  font-size: $h5;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: $link-color;
+  cursor: pointer;
+  list-style: none;
+}
+
+.media-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.media-more summary:hover {
+  color: $link-hover-color;
+}
+
+.media-more .media-more-hide,
+.media-more[open] .media-more-show {
+  display: none;
+}
+
+.media-more[open] .media-more-hide {
+  display: inline;
+}
