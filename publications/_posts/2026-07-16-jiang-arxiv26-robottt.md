@@ -6,6 +6,7 @@ title: "RoboTTT: Context Scaling for Robot Policies"
 authors: "Yunfan Jiang, Yevgen Chebotar, Ruijie Zheng, Fengyuan Hu, Yunhao Ge, Jimmy Wu, Tianyuan Dai, Scott Reed, Li Fei-Fei&dagger;, Yuke Zhu&dagger;, Linxi \"Jim\" Fan&dagger;"
 pub_info_name: "Conference on Robot Learning (CoRL)"
 pub_info_date: November 2026
+pub_info_highlight: Oral Presentation
 excerpt: text text text
 images:
   thumb: jiang-arxiv26-robottt.jpg

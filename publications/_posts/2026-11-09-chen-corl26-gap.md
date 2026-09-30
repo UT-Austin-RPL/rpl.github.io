@@ -4,6 +4,7 @@ title: "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational
 authors: "Kaiyuan Chen, Shuangyu Xie, Letian Fu, Justin Yu, William Pacini, Sandeep Bajamahal, Hudson Kim, Jaimyn Drake, Daehwa Kim, Haoru Xue, Jonathan Francis, Christian Juette, Peter Schaldenbrand, Muhammet Yunus Seker, Ruwan Wickramarachchi, Uksang Yoo, Guanzhi Wang, Adithyavairavan Murali, Balakumar Sundaralingam, S. Shankar Sastry, Spencer Huang, Yuke Zhu, Linxi \"Jim\" Fan, Ken Goldberg"
 pub_info_name: "Conference on Robot Learning (CoRL)"
 pub_info_date: November 2026
+pub_info_highlight: Spotlight Presentation
 images:
   thumb: chen-corl26-gap-thumb.webp
   main: chen-corl26-gap.jpg

@@ -6,6 +6,7 @@ title: "DreamZero: World Action Models are Zero-shot Policies"
 authors: "Seonghyeon Ye, Yunhao Ge, Kaiyuan Zheng, Shenyuan Gao, Sihyun Yu, George Kurian, Suneel Indupuru, You Liang Tan, Chuning Zhu, Jiannan Xiang, Ayaan Malik, Kyungmin Lee, William Liang, Nadun Ranawaka, Jiasheng Gu, Yinzhen Xu, Guanzhi Wang, Fengyuan Hu, Avnish Narayan, Johan Bjorck, Jing Wang, Gwanghyun Kim, Dantong Niu, Ruijie Zheng, Yuqi Xie, Jimmy Wu, Qi Wang, Ryan Julian, Danfei Xu, Yilun Du, Yevgen Chebotar, Scott Reed, Jan Kautz, Yuke Zhu&dagger;, Linxi \"Jim\" Fan&dagger;, Joel Jang&dagger;"
 pub_info_name: "Conference on Robot Learning (CoRL)"
 pub_info_date: November 2026
+pub_info_highlight: Oral Presentation
 excerpt: text text text
 images:
   thumb: ye-arxiv26-dreamzero.jpg

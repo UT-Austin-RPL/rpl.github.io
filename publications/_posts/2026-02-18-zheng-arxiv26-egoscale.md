@@ -6,6 +6,7 @@ title: "EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human D
 authors: "Ruijie Zheng*, Dantong Niu*, Yuqi Xie*, Jing Wang, Mengda Xu, Yunfan Jiang, Fernando Castañeda, Fengyuan Hu, You Liang Tan, Letian Fu, Trevor Darrell, Furong Huang, Yuke Zhu&dagger;, Danfei Xu&dagger;, Linxi Fan&dagger;"
 pub_info_name: "Conference on Robot Learning (CoRL)"
 pub_info_date: November 2026
+pub_info_highlight: Oral Presentation
 excerpt: text text text
 images:
   thumb: zheng-arxiv26-egoscale.jpg

@@ -6,6 +6,7 @@ title: "GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Pr
 authors: "Tianyi Xie*, Haotian Zhang*, Jinhyung Park*, Zi Wang*, Bowen Wen, Jiefeng Li, Xueting Li, Qingwei Ben, Haoyang Weng, Yufei Ye, David Minor, Tingwu Wang, Chenfanfu Jiang, Sanja Fidler, Jan Kautz, Linxi \"Jim\" Fan, Yuke Zhu, Zhengyi Luo, Umar Iqbal, Ye Yuan"
 pub_info_name: "Conference on Robot Learning (CoRL)"
 pub_info_date: November 2026
+pub_info_highlight: Oral Presentation
 excerpt: text text text
 images:
   thumb: xie-arxiv26-grail.jpg
