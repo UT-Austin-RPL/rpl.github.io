@@ -62,3 +62,36 @@
 .media-more[open] .media-more-hide {
   display: inline;
 }
+
+// Media coverage entries: text on the left, logo in its own column on the right,
+// so descriptions never wrap underneath the logo.
+.media-entry-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 5%;
+}
+
+.media-entry .pub-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.media-entry .pub-title,
+.media-entry .pub-venue {
+  width: auto;
+}
+
+.media-entry .pub-img {
+  float: none;
+  flex: 0 0 25%;
+  height: auto;
+  object-fit: contain;
+  object-position: right top;
+}
+
+// The Science wordmark fills its image edge to edge, so it reads much larger
+// than the other logos at the same width; scale it down to match visually.
+.media-entry .pub-img[src$="/science.png"] {
+  transform: scale(0.7);
+  transform-origin: right top;
+}
