@@ -6,7 +6,7 @@ The Apache configuration in `htaccess` belongs at `/v/filer5b/web-vhosts/rpl.cs.
 
 - Keep `cs343_spring2021`, `cs343_spring2022`, `cs343_spring2023`, and `cs343h_fall2024` on UTCS, including all their descendants.
 - Keep `/sw.js` and `/.well-known/acme-challenge/` local for service-worker retirement and certificate renewal.
-- Redirect all other paths to `https://ut-austin-rpl.github.io/rpl.github.io/`, preserving paths and query strings, except for the explicit aliases below.
+- Redirect all other paths to `https://ut-austin-rpl.github.io/`, preserving paths and query strings, except for the explicit aliases below.
 - Map three dated talk PDF filenames to their current filenames, the Talks directory to Research, duplicate `/page2/` through `/page48/` entries to the homepage, and the obsolete Facebook feed to the RSS feed.
 - Use 302 while the future custom domain is undecided. This is an active production redirect, not a requirement to keep deploying the old website.
 
@@ -20,6 +20,8 @@ The Apache configuration in `htaccess` belongs at `/v/filer5b/web-vhosts/rpl.cs.
 6. Check redirects, old PDF aliases, all Media paths, course pages and assets, query strings, and a returning browser with the old worker installed. Roll back if verification fails.
 
 ## Operations and recovery
+
+For the organization-root URL migration, deploy and verify the root GitHub site first, then replace only the UTCS `.htaccess` destinations. Back up the current `.htaccess` privately and check its hash before replacement. Preserve the already-installed retiring `sw.js`, course files, and all old website files. If verification fails, restore that release's `.htaccess` backup after confirming no intervening edits; do not restore the original pre-migration worker.
 
 Keep UTCS DNS, HTTPS, the web host, and course files active. The GitHub Pages deployment cannot update UTCS. Avoid the old whole-site deployment scripts because they can overwrite `/sw.js`; deploy courses only into their own directories.
 

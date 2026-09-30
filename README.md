@@ -2,8 +2,8 @@
 
 This repository hosts the Robot Perception and Learning Lab website.
 
-- Repository: `UT-Austin-RPL/rpl.github.io`
-- Public URL: https://ut-austin-rpl.github.io/rpl.github.io/
+- Repository: `UT-Austin-RPL/ut-austin-rpl.github.io`
+- Public URL: https://ut-austin-rpl.github.io/
 - Generator: Jekyll, using the existing lab site's theme and content.
 - Source snapshot: `UT-Austin-RPL/RPL-group-website` at `f1a0aba`, with the locally approved HumanoidMimicGen workshop removal included.
 
@@ -29,16 +29,31 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Open http://127.0.0.1:4000/rpl.github.io/ . Keep the project subpath during local preview so GitHub Pages path issues are caught early.
+Open http://127.0.0.1:4000/ . The organization website is served at the root, so `baseurl` must remain empty.
 
 Build and validate:
 
 ```sh
 JEKYLL_ENV=production bundle exec jekyll build
 bundle exec ruby scripts/verify_site.rb
+bundle exec ruby scripts/test_publication_sort.rb
+bundle exec ruby scripts/test_site_url_scope.rb
+node scripts/test_legacy_redirect.cjs
 ```
 
 Validation checks internal links and assets across generated pages, the publication search index, RSS, the sitemap, canonical URLs, published size, course exclusions, and every legacy Media article and image path listed in `_data/legacy_media_paths.yml`. It does not make bulk requests to external publication websites.
+
+Separate GitHub Pages project sites on the same organization host are listed in `_data/github_pages_projects.yml`. Only absolute links to those explicit project paths are treated as external. Unknown paths and relative links must still resolve inside this website; main-site files must not collide with those project paths.
+
+## Organization-root URL and old bookmarks
+
+GitHub serves the organization homepage from the repository named `<organization>.github.io`. Renaming the repository alone does not update Jekyll's asset URLs: `_config.yml` must use `url: "https://ut-austin-rpl.github.io"` and `baseurl: ""`.
+
+The custom `404.html` page recognizes the former `/rpl.github.io/` prefix and redirects browsers to the corresponding root URL, preserving the query string and fragment. This includes browser-opened PDF bookmarks. It does not redirect unrelated project websites or ordinary missing pages.
+
+This is a JavaScript compatibility fallback, not an HTTP 301/302: old URLs initially return 404. Automated PDF downloaders, crawlers, embedded resources, and browsers without JavaScript should use the new direct URLs. Share `https://ut-austin-rpl.github.io/talks/...` for slides. GitHub Pages cannot implement Apache-style server redirects, and the old project URLs are not automatically redirected by a repository rename.
+
+The local checkout folder may remain named `rpl.github.io`; only its Git remote needs to point to `git@github.com:UT-Austin-RPL/ut-austin-rpl.github.io.git`. No organization rename or custom domain is part of this change. Before any future organization rename, plan the root repository name, canonical URL, project links, and UTCS redirects together.
 
 ## Enable GitHub Pages for the first time
 
@@ -85,7 +100,7 @@ All other website content redirects to GitHub, including Media, talks, images, a
 
 The 47 historical pagination URLs (`/page2/` through `/page48/`) contained exactly the same main content as the homepage; redirect them to the new homepage. Redirect the obsolete `/fb-instant-articles.xml` feed to `/feed.xml`, and the `/talks/` directory entry to the Research page, where the talks are listed.
 
-Use `https://ut-austin-rpl.github.io/rpl.github.io/<original-path>` as the temporary destination. A 302 redirect is appropriate until the custom domain is finalized. Once the final domain is stable, update redirects to point directly to it.
+Use `https://ut-austin-rpl.github.io/<original-path>` as the destination after the root site is verified live. A 302 redirect is appropriate until the custom domain is finalized. Once the final domain is stable, update redirects to point directly to it.
 
 Historical PDF filenames need explicit mappings that take precedence over general directory redirects:
 

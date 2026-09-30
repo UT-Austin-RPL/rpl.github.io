@@ -5,12 +5,19 @@ require "find"
 require "pathname"
 require "nokogiri"
 require "addressable/uri"
+require_relative "site_url_scope"
 
 root = File.expand_path("../_site", __dir__)
 config = YAML.safe_load(File.read(File.expand_path("../_config.yml", __dir__)), aliases: true)
 origin = Addressable::URI.parse(ENV.fetch("SITE_URL", config.fetch("url")))
 base = ENV.fetch("SITE_BASEURL", config.fetch("baseurl", "")).sub(%r{/+$}, "")
 errors = []
+projects = YAML.safe_load(File.read(File.expand_path("../_data/github_pages_projects.yml", __dir__)))
+if base.empty?
+  projects.each do |project|
+    errors << "Main-site path conflicts with a separate project: /#{project}/" if File.exist?(File.join(root, project))
+  end
+end
 files = []
 Find.find(root) do |path|
   errors << "Unsupported symlink: #{path}" if File.symlink?(path)
@@ -35,9 +42,11 @@ check_url = lambda do |value, page_url, source|
     target = Addressable::URI.join(page_url, value)
     next unless %w[http https].include?(target.scheme)
     next unless target.host == origin.host
+    next if SiteURLScope.external_project?(value, target, origin, base, projects)
     path = Addressable::URI.unencode_component(target.normalize.path)
     # Other projects at this GitHub organization are external to this site.
-    # Relative/root-relative paths, however, must never escape this project.
+    # At the organization root, only explicitly listed absolute project links
+    # are external. Relative links and unknown main-site paths must exist.
     inside = base.empty? || path == base || path.start_with?(base + "/")
     unless inside
       errors << "#{source}: link escapes baseurl: #{value}" unless value.match?(%r{\A(?:https?:)?//})

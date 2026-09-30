@@ -1,0 +1,28 @@
+# Separate project websites at ut-austin-rpl.github.io, not this site's files.
+# Keep this explicit so misspelled main-site links still fail validation.
+- amago
+- BUDS-website
+- casper
+- Coopernaut
+- Ditto
+- Doduo
+- FORGE
+- GROOT
+- Harmon
+- HouseDitto
+- Lotus
+- maple
+- MimicDroid
+- MUTEX
+- OKAMI
+- olaf
+- ORION-release
+- PRELUDE
+- PRIME
+- sailor
+- SCIZOR
+- sirius
+- sirius-fleet
+- sirius-runtime-monitor
+- TRILL
+- VIOLA

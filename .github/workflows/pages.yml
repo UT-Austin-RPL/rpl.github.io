@@ -35,6 +35,11 @@ jobs:
         run: bundle exec ruby scripts/verify_site.rb
       - name: Check deterministic publication ordering
         run: bundle exec ruby scripts/test_publication_sort.rb
+
+      - name: Check root-site links and legacy bookmarks
+        run: |
+          bundle exec ruby scripts/test_site_url_scope.rb
+          node scripts/test_legacy_redirect.cjs
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4

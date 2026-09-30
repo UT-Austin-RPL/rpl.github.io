@@ -3,7 +3,7 @@ title:       Robot Perception and Learning Lab
 email:       dr.yukezhu@gmail.com
 author:      Yuke Zhu
 description: "RPL Homepage"
-baseurl:     "/rpl.github.io"
+baseurl:     ""
 url:         "https://ut-austin-rpl.github.io"
 date_format: "%b %-d, %Y"
 header_pages:

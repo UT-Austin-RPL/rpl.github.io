@@ -12,18 +12,18 @@ RewriteRule ^\.well-known/acme-challenge(?:/|$) - [L]
 </Files>
 
 # Old dated slide filenames must be mapped before the general talk rule.
-RewriteRule ^talks/2026_06_03_building_generalist_humanoid_robots\.pdf$ https://ut-austin-rpl.github.io/rpl.github.io/talks/building_generalist_humanoid_robots.pdf [R=302,L]
-RewriteRule ^talks/2025_10_31_towards_generalist_humanoid_robots\.pdf$ https://ut-austin-rpl.github.io/rpl.github.io/talks/towards_generalist_humanoid_robots.pdf [R=302,L]
-RewriteRule ^talks/2024_11_04_data_pyramid_and_data_flywheel_for_robotic_foundation_models\.pdf$ https://ut-austin-rpl.github.io/rpl.github.io/talks/data_pyramid_and_data_flywheel_for_robotic_foundation_models.pdf [R=302,L]
+RewriteRule ^talks/2026_06_03_building_generalist_humanoid_robots\.pdf$ https://ut-austin-rpl.github.io/talks/building_generalist_humanoid_robots.pdf [R=302,L]
+RewriteRule ^talks/2025_10_31_towards_generalist_humanoid_robots\.pdf$ https://ut-austin-rpl.github.io/talks/towards_generalist_humanoid_robots.pdf [R=302,L]
+RewriteRule ^talks/2024_11_04_data_pyramid_and_data_flywheel_for_robotic_foundation_models\.pdf$ https://ut-austin-rpl.github.io/talks/data_pyramid_and_data_flywheel_for_robotic_foundation_models.pdf [R=302,L]
 
 # Canonical entry pages.
-RewriteRule ^(?:index\.html)?$ https://ut-austin-rpl.github.io/rpl.github.io/ [R=302,L]
-RewriteRule ^(people|research|robots|opportunities|postdoc-openings|teaching|publications|media)(?:/index\.html|/)?$ https://ut-austin-rpl.github.io/rpl.github.io/$1/ [R=302,L]
-RewriteRule ^talks(?:/index\.html|/)?$ https://ut-austin-rpl.github.io/rpl.github.io/research/ [R=302,L]
+RewriteRule ^(?:index\.html)?$ https://ut-austin-rpl.github.io/ [R=302,L]
+RewriteRule ^(people|research|robots|opportunities|postdoc-openings|teaching|publications|media)(?:/index\.html|/)?$ https://ut-austin-rpl.github.io/$1/ [R=302,L]
+RewriteRule ^talks(?:/index\.html|/)?$ https://ut-austin-rpl.github.io/research/ [R=302,L]
 
 # Legacy pagination duplicated the homepage rather than unique archive content.
-RewriteRule ^page(?:[2-9]|[1-3][0-9]|4[0-8])(?:/index\.html|/)?$ https://ut-austin-rpl.github.io/rpl.github.io/ [R=302,L]
-RewriteRule ^fb-instant-articles\.xml$ https://ut-austin-rpl.github.io/rpl.github.io/feed.xml [R=302,L]
+RewriteRule ^page(?:[2-9]|[1-3][0-9]|4[0-8])(?:/index\.html|/)?$ https://ut-austin-rpl.github.io/ [R=302,L]
+RewriteRule ^fb-instant-articles\.xml$ https://ut-austin-rpl.github.io/feed.xml [R=302,L]
 
 # Every other path uses GitHub. Apache preserves the original query string.
-RewriteRule ^(.*)$ https://ut-austin-rpl.github.io/rpl.github.io/$1 [R=302,L]
+RewriteRule ^(.*)$ https://ut-austin-rpl.github.io/$1 [R=302,L]
